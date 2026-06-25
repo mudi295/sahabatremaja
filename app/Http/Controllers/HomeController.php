@@ -10,6 +10,9 @@ use App\Models\Team;
 use App\Models\Testimonial;
 use App\Models\Setting;
 use App\Models\About;
+use App\Models\Statistic;
+use App\Http\Controllers\MaterialController;
+
 
 class HomeController extends Controller
 {
@@ -28,6 +31,9 @@ class HomeController extends Controller
             'testimonials' => Testimonial::where('is_active', true)
                                          ->take(6)
                                          ->get(),
+            'statistics' => Statistic::where('is_active', true)
+                    ->orderBy('sort_order')
+                    ->get(),
         ]);
     }
 }

@@ -8,6 +8,8 @@
 
 @include('components.about')
 
+@include('components.statistic')
+
 @include('components.program')
 
 @include('components.article')

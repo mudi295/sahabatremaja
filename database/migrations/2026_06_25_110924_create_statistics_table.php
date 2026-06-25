@@ -11,12 +11,23 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('evacuation_routes', function (Blueprint $table) {
-            $table->id();
-    $table->string('name');
-    $table->text('description')->nullable();
+        Schema::create('statistics', function (Blueprint $table) {
+
+    $table->id();
+
+    $table->string('title');
+    $table->string('value');
+
+    $table->string('icon')->nullable();
+
+    $table->integer('sort_order')
+        ->default(0);
+
+    $table->boolean('is_active')
+        ->default(true);
+
     $table->timestamps();
-        });
+});
     }
 
     /**
@@ -24,6 +35,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('evacuation_routes');
+        Schema::dropIfExists('statistics');
     }
 };

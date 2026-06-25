@@ -2,10 +2,9 @@
 
 namespace App\Filament\Resources\EvacuationRoutes\Tables;
 
-use Filament\Actions\BulkActionGroup;
-use Filament\Actions\DeleteBulkAction;
-use Filament\Actions\EditAction;
 use Filament\Tables\Table;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\IconColumn;
 
 class EvacuationRoutesTable
 {
@@ -13,18 +12,23 @@ class EvacuationRoutesTable
     {
         return $table
             ->columns([
-                //
-            ])
-            ->filters([
-                //
-            ])
-            ->recordActions([
-                EditAction::make(),
-            ])
-            ->toolbarActions([
-                BulkActionGroup::make([
-                    DeleteBulkAction::make(),
-                ]),
+
+                TextColumn::make('title')
+                    ->searchable(),
+
+                TextColumn::make('disaster_type')
+                    ->badge(),
+
+                TextColumn::make('safe_location'),
+
+                TextColumn::make('estimated_time')
+                    ->suffix(' menit'),
+
+                IconColumn::make('is_active')
+                    ->boolean(),
+
+                TextColumn::make('created_at')
+                    ->dateTime('d M Y'),
             ]);
     }
 }
