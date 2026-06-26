@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Program;
+use App\Models\Setting;
 
 class ProgramController extends Controller
 {

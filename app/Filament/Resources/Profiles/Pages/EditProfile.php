@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Filament\Resources\Abouts\Pages;
+namespace App\Filament\Resources\Profiles\Pages;
 
-use App\Filament\Resources\Abouts\AboutResource;
+use App\Filament\Resources\Profiles\ProfileResource;
 use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
 
-class EditAbout extends EditRecord
+class EditProfile extends EditRecord
 {
-    protected static string $resource = AboutResource::class;
+    protected static string $resource = ProfileResource::class;
 
     protected function getHeaderActions(): array
     {

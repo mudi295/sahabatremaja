@@ -42,7 +42,7 @@ src="https://unpkg.com/leaflet/dist/leaflet.js">
         <main class="flex-grow">
             @yield('content')
         </main>
-
+        
     </div>
 
     <!-- AOS Animation Script -->

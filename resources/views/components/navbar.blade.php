@@ -126,7 +126,7 @@
                             <p class="text-xs font-bold text-teal-600 uppercase tracking-wider">Kenali Kami</p>
                         </div>
                         
-                        <a href="{{ route('about.profile') ?? '#' }}" class="group flex items-center gap-3 px-5 py-3 text-slate-600 hover:text-teal-700 hover:bg-teal-50/50 transition-all duration-200">
+                        <a href="{{ route('profile.index') ?? '#' }}" class="group flex items-center gap-3 px-5 py-3 text-slate-600 hover:text-teal-700 hover:bg-teal-50/50 transition-all duration-200">
                             <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-orange-100 text-orange-600 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
@@ -392,7 +392,7 @@
                 </button>
                 
                 <div x-show="open" x-collapse class="pl-4 mt-1 space-y-1">
-                    <a href="{{ route('about.profile') ?? '#' }}" @click="isOpen = false" 
+                    <a href="{{ route('profile.index') ?? '#' }}" @click="isOpen = false" 
                        class="flex items-center gap-3 px-4 py-3 rounded-lg text-sm text-slate-600 hover:text-teal-700 hover:bg-teal-50/50 transition-all duration-200">
                         <span class="w-2 h-2 rounded-full bg-orange-400"></span>
                         Profil Organisasi

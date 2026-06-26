@@ -9,7 +9,7 @@ use App\Models\Gallery;
 use App\Models\Team;
 use App\Models\Testimonial;
 use App\Models\Setting;
-use App\Models\About;
+use App\Models\profile;
 use App\Models\Statistic;
 use App\Http\Controllers\MaterialController;
 
@@ -20,7 +20,7 @@ class HomeController extends Controller
     {
         return view('home', [
             'setting' => Setting::first(),
-            'about' => About::first(),
+            'profile' => profile::first(),
             'articles' => Article::latest()->take(3)->get(),
             'programs' => Program::latest()->take(3)->get(),
             'galleries' => Gallery::latest()->take(8)->get(),

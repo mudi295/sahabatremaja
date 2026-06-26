@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Filament\Resources\Abouts\Schemas;
+namespace App\Filament\Resources\Profiles\Schemas;
 
 use Filament\Schemas\Schema;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Textarea;
 
-class AboutForm
+class ProfileForm
 {
     public static function configure(Schema $schema): Schema
     {
@@ -26,8 +26,9 @@ class AboutForm
                     ->required(),
 
                 FileUpload::make('image')
-                    ->image()
-                    ->directory('about'),
+    ->image()
+    ->acceptedFileTypes(['image/jpeg', 'image/jpg', 'image/png', 'image/webp']) // Menentukan tipe secara spesifik
+    ->directory('Profile'),
 
                 Textarea::make('vision')
                     ->rows(4),

@@ -7,7 +7,7 @@ use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\MaterialController;
 use App\Http\Controllers\EvacuationRouteController;
-use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\VolunteerController;
 use App\Http\Controllers\GalleryController; 
@@ -15,7 +15,7 @@ use App\Http\Controllers\GalleryController;
 Route::get('/', [HomeController::class, 'index']);
 
 
-Route::get('/about', [AboutController::class, 'profile'])->name('about.profile');
+Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');
 Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.index');
 Route::get('/team', [TeamController::class, 'index'])->name('team.index');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');

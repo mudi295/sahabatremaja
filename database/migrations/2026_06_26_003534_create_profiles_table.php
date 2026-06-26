@@ -6,10 +6,13 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+    /**
+     * Run the migrations.
+     */
     public function up(): void
     {
-        Schema::create('abouts', function (Blueprint $table) {
-            $table->id();
+        Schema::create('profiles', function (Blueprint $table) {
+           $table->id();
 
             $table->string('title');
             $table->string('subtitle')->nullable();
@@ -28,8 +31,11 @@ return new class extends Migration
         });
     }
 
+    /**
+     * Reverse the migrations.
+     */
     public function down(): void
     {
-        Schema::dropIfExists('abouts');
+        Schema::dropIfExists('profiles');
     }
 };

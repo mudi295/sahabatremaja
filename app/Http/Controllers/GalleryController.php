@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Gallery;
 use Illuminate\Http\Request;
 
 class GalleryController extends Controller
 {
-    public function index() {
-        return view('gallery.index');
+    public function index()
+    {
+        // Mengambil foto terbaru dan membaginya menjadi 9 item per halaman
+        $galleries = Gallery::latest()->paginate(9);
+
+        return view('gallery.index', compact('galleries'));
     }
 }
